@@ -16,8 +16,8 @@ def change_img():
     text = convert_time_to_string(start_time)
     row = Image.new('RGBA', (200, 200), "black")# Цвет фона black,white тд
     parsed = ImageDraw.Draw(row)
-    font = ImageFont.truetype("HEADPLANE.ttf", FONT_SIZE)#стиль шрифта
-    font2 = ImageFont.truetype("HEADPLANE.ttf", 15)
+    font = ImageFont.load_default("HEADPLANE.ttf", FONT_SIZE)#стиль шрифта
+    font2 = ImageFont.load_default()("HEADPLANE.ttf", 15)
     parsed.text((int(row.size[0]*0.23), int(row.size[1]*0.31)), f'{text}', 
                  align="center", font=font, fill=(246,249,247))
     parsed.text((45, 110),'#StopWar', # подтекст
